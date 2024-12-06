@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmark</title>
+    <!-- !font awesome stylesheet -->
+     <link rel="stylesheet" href="css/all.min.css">
+     <!-- todo font stylesheet --><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+
+     <!-- ^ bootstrap stylesheet -->
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+     
+      <!-- & css stylesheet -->
+       <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  
+    <div class="container d-flex justify-content-center align-items-center flex-column mt-5">
+        
+        <h1 class="title  text-black px-0 py-2 overflow-hidden mb-3">Bookmarker</h1>
+        <div class="mt-5 bookmark-content d-flex p-4 gap-4 w-100 justify-content-center align-items-center flex-column">
+        <h2 class="fs-4">
+            <i class="fa-solid fa-bookmark"></i>
+            Bookmark your favorite sites 
+            <i class="fa-solid fa-bookmark"></i>
+        </h2>
+        <div class="SiteName mb-3 d-flex flex-column justify-content-center align-items-start w-100 ">
+            <label for="SiteName" class=" fw-bold mb-2">
+                <i class="fa-solid fa-book-bookmark pe-2"></i>
+                Site Name
+            </label>
+            <input oninput="validation(this)" type="text" class="form-control" id="siteName" placeholder="Bookmark Name" >
+        </div>
+        <div class="SiteURL d-flex flex-column justify-content-center align-items-start w-100 ">
+            <label for="SiteURL" class=" fw-bold mb-2">
+                <i class="fa-solid fa-link"></i>
+                Site URL
+            </label>
+            <input oninput="validation(this)" type="text" class="form-control" id="siteURL" placeholder="Website URL" >
+        </div>
+        <button onclick="addSite()" id="btnSubmit" class="btn btn-submit px-5"> Submit</button>
+        </div>
+   <table class="my-4 bg-white table text-center">
+    <thead>
+        <th class="text-capitalize">index</th>
+        <th class="text-capitalize">Website Name</th>
+        <th class="text-capitalize">Visit</th>
+        <th class="text-capitalize">Delete</th>
+    </thead>
+    <tbody class="body-content" id="bodyInfo">
+        
+    </tbody>
+   </table>
+</div>
+ 
+    
+   
+    <!-- *js stylesheet -->
+    <script src="js/main.js"></script>
+</body>
+</html>
